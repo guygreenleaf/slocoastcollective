@@ -11,9 +11,9 @@ export default function About() {
       exit={{opacity:0, transition:{duration:1.2}}}
     >
       <div>
-      <Link href="/">
-        <IconButton isRound={true} aria-label="Back" icon={<ArrowBackIcon />} style={{ backgroundColor:"#e0e0e0", fontSize:"2.15rem",  position:"absolute", marginLeft:"0.75rem", marginTop:"0.75rem"}} />
-      </Link>
+        <Link href="/">
+          <IconButton isRound={true} aria-label="Back" icon={<ArrowBackIcon />} style={{ backgroundColor:"#e0e0e0", fontSize:"2.15rem",  position:"absolute", marginLeft:"0.75rem", marginTop:"0.75rem"}} />
+        </Link>
       </div>
       <div style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh"}}>
         <div style={{display:"flex", height:"70vh", flexDirection:"column", alignItems:"center"}}>

@@ -3,11 +3,12 @@ import { IconButton } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 
-export default function NotFound() {
+export default function LB() {
   return (
-    <motion.div initial={{opacity: 0}}
-                animate={{opacity:1, transition:{duration:1.2}}}
-                exit={{opacity:0, transition:{duration:1.2}}}
+    <motion.div
+      initial={{opacity: 0}}
+      animate={{opacity:1, transition:{duration:1.2}}}
+      exit={{opacity:0, transition:{duration:1.2}}}
     >
       <div>
         <Link href="/">
@@ -17,12 +18,18 @@ export default function NotFound() {
       <div style={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh"}}>
         <div style={{display:"flex", height:"70vh", flexDirection:"column", alignItems:"center"}}>
           <div>
-            <span style={{fontFamily: "Roboto Condensed, sans-serif", fontWeight:"bold", fontSize:"3rem"}}>
-                This page doesn&apos;t exist yet.
+            <span style={{fontFamily: "Roboto Condensed, sans-serif", fontWeight:"bold", fontSize:"2.2rem"}}>
+                Local Business of the Week
             </span>
           </div>
+          <div style={{maxWidth:"50rem", textAlign:"center", marginTop:"1rem"}}>
+              <p style={{fontSize:"1.25rem"}}>
+                Coming soon!
+              </p>
+            </div>
         </div>
       </div>
     </motion.div>
   )
 }
+

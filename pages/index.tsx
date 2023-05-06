@@ -68,6 +68,11 @@ export default function Home() {
                       About
                   </p>
               </Link>
+              <Link href="/LB" style={{display:"block", width:"8rem"}}>
+                <p style={{ cursor: "pointer", width: "12.5rem", marginBottom:"0.2rem" }} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+                    Local Business of the Week
+                </p>
+              </Link>
               <Link href="/FP" style={{display:"block", width:"8rem"}}>
                 <p style={{ cursor: "pointer", width: "8rem", marginBottom:"0.2rem" }} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                     Featured Photos
