@@ -7,7 +7,7 @@ import { Card, CardBody, Heading, IconButton, Stack } from '@chakra-ui/react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
 import styles from '../../styles/Blog.module.css';
 import { Image, Text } from '@chakra-ui/react';
-
+import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 
 export default function Post({ postData }:any) {
   return (
@@ -52,7 +52,7 @@ export default function Post({ postData }:any) {
           <br />
           <Card style={{marginLeft:'3rem', marginRight:'3rem'}}>
             <CardBody style={{marginLeft:"2.5rem", marginRight:"2.5rem"}}>
-              <ReactMarkdown>{postData.content}</ReactMarkdown>
+              <ReactMarkdown components={ChakraUIRenderer()} >{postData.content}</ReactMarkdown>
             </CardBody>
           </Card>
         </div>

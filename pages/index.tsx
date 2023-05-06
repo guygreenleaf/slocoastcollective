@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import {motion} from 'framer-motion';
 import Link from "next/link";
 import TypingEffect from "./TypingEffect";
+import { IconButton } from '@chakra-ui/react'
+
+import { BsInstagram, BsYoutube, BsFacebook } from "react-icons/bs";
+import { redirect } from "next/dist/server/api-utils";
 
 export default function Home() {
 
@@ -53,12 +57,12 @@ export default function Home() {
         exit={{opacity:0, transition:{duration:1.2}}}
     >
       <div style={{ display: "flex", flexDirection: "column" }}>
-          <TypingEffect
-              text="SLO Coast Collective"
-              style={headerStyle}
-              onFinish={handleTypingFinish}
-          />
-          <div style={descriptionStyle}>
+        <TypingEffect
+            text="SLO Coast Collective"
+            style={headerStyle}
+            onFinish={handleTypingFinish}
+        />
+        <div style={descriptionStyle}>
           <p style={{fontWeight:"500", fontSize:"22px"}}>
               A creative collective focused on showcasing the Central Coast of California☀️🌊
           </p>
@@ -91,8 +95,31 @@ export default function Home() {
               <p style={{ cursor: "pointer", width: "3.7rem", marginBottom:"0.2rem" }} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                   <a href="mailto:inquiries@slocoastcollective.com">Contact</a>
               </p>
+              <div style={{display:"flex", flexDirection:"row", marginTop:"1.5rem"}}>
+                <Link href={"https://www.instagram.com/slo.coast.collective/"} target="_blank">
+                  <IconButton variant='outline'
+                              colorScheme='blackAlpha'
+                              aria-label='Instagram' 
+                              icon={<BsInstagram />}
+                  />
+                </Link>
+                <Link href={"https://www.youtube.com/@SloCoastCollective"} target="_blank">
+                  <IconButton variant='outline' marginLeft={'1rem'}
+                              colorScheme='blackAlpha'
+                              aria-label='Youtube' 
+                              icon={<BsYoutube />}
+                  />
+                </Link>
+                <Link href={"https://www.facebook.com/profile.php?id=100092219806662"} target="_blank">
+                  <IconButton variant='outline'marginLeft={'1rem'}
+                              colorScheme='blackAlpha'
+                              aria-label='Instagram' 
+                              icon={<BsFacebook />}
+                  />
+                </Link>
+              </div>
           </div>
-          </div>
+        </div>
       </div>
     </motion.div>
   )
