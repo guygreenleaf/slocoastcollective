@@ -47,7 +47,7 @@ export default function Blog({allPostsData}:any) {
                       -webkit-box-shadow: 5px 5px 23px -12px rgba(0,0,0,0.56);
                       -moz-box-shadow: 5px 5px 23px -12px rgba(0,0,0,0.56);` 
                     }}>
-                      <Card  direction={{base:'column', sm:'row'}} overflow='hidden' variant='outline' marginBottom={"1.5rem"}>
+                      <Card  direction={{base:'column', sm:'row'}} variant='outline' marginBottom={"1.5rem"}>
                           <Image
                           objectFit='cover'
                           maxW={{ base: '100%', sm: '175px' }}
@@ -56,7 +56,7 @@ export default function Blog({allPostsData}:any) {
                           alt='Blog Picture'
                           />
                           <Stack>
-                            <CardBody width={"25vw"} >
+                            <CardBody>
                               <Heading size='md' textAlign={'center'}>
                                 <LinkOverlay href={`/Blog/${id}`}>
                                   {title}
