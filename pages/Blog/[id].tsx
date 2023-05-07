@@ -25,7 +25,7 @@ export default function Post({ postData }:any) {
       >
         <div className={styles.postContainer}>
           <div style={{marginTop:"5rem"}}>
-            <Card style={{maxWidth:'50vw'}}>
+            <Card style={{maxWidth:'75vw'}}>
               <CardBody className={styles.headerContainer}>
                   <div>
                     <Image               
